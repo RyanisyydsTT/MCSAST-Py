@@ -26,7 +26,7 @@ MCSAST-Py is a Python-based tool designed to automate the setup of various types
 
 3. **Run the Script:**
     ```sh
-    python setup.py
+    python main.py
     ```
 
 ## Usage
