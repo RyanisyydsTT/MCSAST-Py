@@ -1,7 +1,6 @@
 import subprocess
 import platform
 import os
-import ctypes
 import re
 import sys
 
@@ -14,11 +13,6 @@ def error(message):
     print(f'Error: {message}')
     os._exit(1)
 
-def is_admin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except:
-        return False
 
 
 
