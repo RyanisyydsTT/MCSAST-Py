@@ -1,8 +1,9 @@
 import subprocess
+import code_def
 print('Starting Server')
 subprocess.run([
 "java",
-f"-Xms{ram}M", f"-Xmx{ram}M",
+f"-Xms{code_def.ram}M", f"-Xmx{code_def.ram}M",
 "--add-modules=jdk.incubator.vector",
 "-XX:+UseG1GC",
 "-XX:+ParallelRefProcEnabled",
