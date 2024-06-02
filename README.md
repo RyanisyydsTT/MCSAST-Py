@@ -8,7 +8,7 @@ MCSAST-Py is a Python-based tool designed to automate the setup of various types
 - Customizable server flags for optimal performance.
 - Supports Windows and Linux operating systems.
 - Checks Java installation and version compatibility.
-
+- **Support Pterodactyl Python Egg!**
 ## Requirements
 - Python 3.x
 - Java Development Kit (JDK) installed and added to the system PATH
@@ -24,7 +24,7 @@ MCSAST-Py is a Python-based tool designed to automate the setup of various types
 2. **Install Dependencies:**
     Ensure you have Python and Java installed on your system.
 
-3. **Run the Script:**
+3. **Run the Setup:**
     ```sh
     python main.py
     ```
@@ -34,7 +34,7 @@ MCSAST-Py is a Python-based tool designed to automate the setup of various types
     The script will automatically check if Java is installed and if the version is supported (17-21). If Java is not found or not supported, the script will exit with an error message.
 
 2. **Choose a Server Type:**
-    The script supports various server types. You will be prompted to choose one from the list:
+    The setup supports various server types. You will be prompted to choose one from the list:
     - Paper
     - Purpur
     - Pufferfish
@@ -49,12 +49,13 @@ MCSAST-Py is a Python-based tool designed to automate the setup of various types
     For most server types, you will need to enter the server version and build number.
 
 4. **Download and Setup Server:**
-    The script will download the server jar file, set it up, and create a script (`runserver.bat` for Windows or `runserver.sh` for Linux) to start the server with recommended flags for optimal performance.
+    The script will download the server jar file, set it up, and create a script (`runserver.bat` for Windows or `runserver.sh` for Linux and `start.py` for pterodactyl) to start the server with recommended flags for optimal performance.
 
 5. **Run Your Server:**
     Once the setup is complete, run your server by executing the generated script:
     - On Windows: Double-click `runserver.bat`
     - On Linux: Run `./runserver.sh`
+    - On Pterodactyl: Go to "Startup" page, change the start file to `start.py`
 
 ## Contributing
 Contributions are welcome! If you have any ideas, suggestions, or improvements, feel free to open an issue or submit a pull request.
@@ -69,3 +70,4 @@ For any questions or support, please contact [willy0925owo@gmail.com](mailto:wil
 This tool is provided "as is" without any warranties. Use it at your own risk. The author is not responsible for any damages or data loss resulting from the use of this tool.
 
 Enjoy your Minecraft server with MCSAST-Py!
+n
