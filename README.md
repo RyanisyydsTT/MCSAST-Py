@@ -69,4 +69,7 @@ For any questions or support, please contact [willy0925owo@gmail.com](mailto:wil
 This tool is provided "as is" without any warranties. Use it at your own risk. The author is not responsible for any damages or data loss resulting from the use of this tool.
 
 Enjoy your Minecraft server with MCSAST-Py!
-n
+
+## TODO List
+- Pterodactyl Support(Gave up cause I cannot find a way to install java in a python file.)
+- Download without build number
