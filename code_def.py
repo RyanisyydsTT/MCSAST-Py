@@ -48,25 +48,25 @@ def setup_paper_server(ver, build_num):
     print("Installing!")
     print("Aikar’s flag? Recommended and high performance server script")
     Aikar = input("Type Y/N: ")
-    if Aikar == "y" or "Y" and system == "Windows":
-        runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+    if (Aikar == "y" or Aikar == "Y") and system == "Windows":
+        runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
-    if Aikar == "y" or "Y" and system == "Linux":
-        runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+    if (Aikar == "y" or Aikar == "Y") and system == "Linux":
+        runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()   
     print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -79,25 +79,25 @@ def setup_purpur_server(ver, build_num):
     print("Installing!")
     print("Aikar’s flag? Recommended and high performance server script")
     Aikar = input("Type Y/N: ")
-    if Aikar == "y" or "Y" and system == "Windows":
-        runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+    if (Aikar == "y" or Aikar == "Y") and system == "Windows":
+        runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
-    if Aikar == "y" or "Y" and system == "Linux":
-        runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+    if (Aikar == "y" or Aikar == "Y") and system == "Linux":
+        runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()   
     print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -117,25 +117,25 @@ def setup_pufferfish_server(ver, build_num):
     print("Installing!")
     print("Aikar’s flag? Recommended and high performance server script")
     Aikar = input("Type Y/N: ")
-    if Aikar == "y" or "Y" and system == "Windows":
-        runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+    if (Aikar == "y" or Aikar == "Y") and system == "Windows":
+        runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
-    if Aikar == "y" or "Y" and system == "Linux":
-        runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+    if (Aikar == "y" or Aikar == "Y") and system == "Linux":
+        runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()   
     print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -148,25 +148,25 @@ def setup_velocity_server(ver, build_num):
     print("Installing!")
     print("Custom flag? Recommended and high performance server script")
     flag = input("Type Y/N: ")
-    if flag == "y" or "Y" and system == "Windows":
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+    if (flag == "y" or flag == "Y") and system == "Windows":
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
-    if flag == "y" or "Y" and system == "Linux":
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+    if (flag == "y" or flag == "Y") and system == "Linux":
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()   
     print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -179,25 +179,25 @@ def setup_bungee_server():
     print("Installing!")
     print("Custom flag? Recommended and high performance server script")
     flag = input("Type Y/N: ")
-    if flag == "y" or "Y" and system == "Windows":
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+    if (flag == "y" or flag == "Y") and system == "Windows":
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
-    if flag == "y" or "Y" and system == "Linux":
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+    if (flag == "y" or flag == "Y") and system == "Linux":
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()   
     print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -210,25 +210,25 @@ def setup_waterfall_server(ver, build_num):
     print("Installing!")
     print("Custom flag? Recommended and high performance server script")
     flag = input("Type Y/N: ")
-    if flag == "y" or "Y" and system == "Windows":
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+    if (flag == "y" or flag == "Y") and system == "Windows":
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
-    if flag == "y" or "Y" and system == "Linux":
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+    if (flag == "y" or flag == "Y") and system == "Linux":
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()    
     else:
         runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()   
     print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -240,15 +240,15 @@ def setup_fabric_server(ver, fabric_loader_ver, fabric_installer_ver):
     print("Download Done!")
     print("Installing!")
     if system == 'Windows':
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.bat', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
         print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
     else:
-        runscipt = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
+        runscript = "java -Xms4096M -Xmx4096M -XX:+UseG1GC -XX:G1HeapRegionSize=4M -XX:+UnlockExperimentalVMOptions -XX:+ParallelRefProcEnabled -XX:+AlwaysPreTouch -XX:MaxInlineLevel=15 -jar server.jar --nogui"
         file = open('runserver.sh', 'a')
-        file.write(runscipt)
+        file.write(runscript)
         file.close()
         print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -266,29 +266,29 @@ def setup_forge_server(ver, forge_ver):
 def setup_custom_server():
     print("Please put your server.jar(rename!) into the folder you have cd-ed!")
     confirm = input("Type “OK” to proceed")
-    if confirm == 'OK' or 'ok':
+    if confirm == 'OK' or confirm == 'ok':
         print("Installing!")
         print("Aikar’s flag? Recommended and high performance server script")
         Aikar = input("Type Y/N: ")
-        if Aikar == "y" or "Y" and system == "Windows":
-            runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+        if (Aikar == "y" or Aikar == "Y") and system == "Windows":
+            runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
             file = open('runserver.bat', 'a')
-            file.write(runscipt)
+            file.write(runscript)
             file.close()
         else:
             runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
             file = open('runserver.bat', 'a')
-            file.write(runscipt)
+            file.write(runscript)
             file.close()    
-        if Aikar == "y" or "Y" and system == "Linux":
-            runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+        if (Aikar == "y" or Aikar == "Y") and system == "Linux":
+            runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
             file = open('runserver.sh', 'a')
-            file.write(runscipt)
+            file.write(runscript)
             file.close()    
         else:
             runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
             file = open('runserver.sh', 'a')
-            file.write(runscipt)
+            file.write(runscript)
             file.close()   
         print("Installed Successfully! Run your server by clicking the runserver.bat/sh It might be stored in the directory that you have cd-ed")
 
@@ -298,20 +298,21 @@ def setup_van_server():
     print("Downlod the version from https://mcversions.net/")
     print("Please put your server.jar(rename!) into the folder you have cd-ed!")
     confirm = input("Type “OK” to proceed")
-    if confirm == 'OK' or 'ok':
+    if confirm == 'OK' or confirm == 'ok':
         print("Installing!")
         print("Aikar’s flag? Recommended and high performance server script")
         Aikar = input("Type Y/N: ")
-        if Aikar == "y" or "Y" and system == "Windows":
-            runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
-            file = open('runserver.bat', 'a')
-            file.write(runscipt)
-            file.close()
-        elif Aikar == "n" or "N" and system == "Windows":
-            runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
-            file = open('runserver.bat', 'a')
-            file.write(runscipt)
-            file.close()    
+        if (Aikar == "y" or Aikar == "Y") and system == "Windows":
+            if Aikar == "y" or "Y" and system == "Windows":
+                runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
+                file = open('runserver.bat', 'a')
+                file.write(runscipt)
+                file.close()
+            elif Aikar == "n" or "N" and system == "Windows":
+                runscript = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -jar server.jar --nogui"
+                file = open('runserver.bat', 'a')
+                file.write(runscipt)
+                file.close()    
         if Aikar == "y" or "Y" and system == "Linux" or "OSX":
             # 
             runscipt = "java -Xms4096M -Xmx4096M --add-modules=jdk.incubator.vector -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=200 -XX:+UnlockExperimentalVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1HeapWastePercent=5 -XX:G1MixedGCCountTarget=4 -XX:InitiatingHeapOccupancyPercent=15 -XX:G1MixedGCLiveThresholdPercent=90 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:SurvivorRatio=32 -XX:+PerfDisableSharedMem -XX:MaxTenuringThreshold=1 -Dusing.aikars.flags=https://mcflags.emc.gs -Daikars.new.flags=true -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -jar server.jar --nogui"
