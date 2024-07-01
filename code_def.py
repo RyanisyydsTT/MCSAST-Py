@@ -17,17 +17,19 @@ def error(message):
 
 
 def check_java_version():
-    supported_ver = [17, 18, 19, 20, 21]
+    supported_ver = [17, 18, 19, 20, 21, 22]
     
     try:
         if system == 'Windows':
             java_version = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT, text=True)
         elif system == 'Linux':
             java_version = subprocess.check_output(['java', '-version'], stderr=subprocess.STDOUT, shell=True, text=True)
+        else:
+            error("Unsupported operating system.")
     except subprocess.CalledProcessError:
         error("Java is not installed or not found in the system PATH.")
     
-    java_version_match = re.search(r'version "(\d+)', java_version)
+    java_version_match = re.search(r'\"(\d+)\.(\d+)\.(\d+)_\d+\"', java_version)
     if java_version_match:
         java_version_num = int(java_version_match.group(1))
         if java_version_num in supported_ver:
@@ -35,10 +37,7 @@ def check_java_version():
     return False
 
 def download_file(url, filename):
-    if system == 'Windows':
-        subprocess.run(['curl', '-O', url], check=True)
-    elif system == 'Linux':
-        subprocess.run(['wget', url, '-O'], check=True)
+    subprocess.run(['curl', '-O', url], check=True)
 
 def setup_paper_server(ver, build_num):
     url = f'https://api.papermc.io/v2/projects/paper/versions/{ver}/builds/{build_num}/downloads/paper-{ver}-{build_num}.jar'
