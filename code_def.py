@@ -332,7 +332,7 @@ def setup_van_server():
 def run():
 
     if not check_java_version():
-        error("Java Installed Incorrectly, or you haven't installed it")
+        print("Java Installed Incorrectly, or you haven't installed it, proceeding anyway...")
 
     print("Java Installed! Choose a version you want to install!")
     print("""
