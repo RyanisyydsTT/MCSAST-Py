@@ -27,8 +27,7 @@ def check_java_version():
         else:
             error("Unsupported operating system.")
     except subprocess.CalledProcessError:
-        error("Java is not installed or not found in the system PATH.")
-    
+        print("Java is not installed or not found in the system PATH, proceeding anyways")
     java_version_match = re.search(r'\"(\d+)\.(\d+)\.(\d+)_\d+\"', java_version)
     if java_version_match:
         java_version_num = int(java_version_match.group(1))
