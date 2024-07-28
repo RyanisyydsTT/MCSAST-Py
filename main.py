@@ -1,4 +1,3 @@
-import colorama
 import code_def
 # 乾乾淨淨真好
 print("""
